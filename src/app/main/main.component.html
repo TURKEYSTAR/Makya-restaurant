@@ -1,0 +1,104 @@
+<!-- CONTENT -->
+<section id="content">
+  <!-- MAIN -->
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Dashboard</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a routerLink="/makyatraiteur/admin">Dashboard</a>
+          </li>
+          <li><i class='bx bx-chevron-right'></i></li>
+          <li>
+            <a class="active" routerLink="/makyatraiteur/admin">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="box-info">
+      <li>
+        <i class='bx bxs-calendar-check'></i>
+        <span class="text">
+          <h3>23</h3>
+          <p>Commandes</p>
+        </span>
+      </li>
+      <li>
+        <i class='bx bxs-group'></i>
+        <span class="text">
+          <h3>6</h3>
+          <p>Clients</p>
+        </span>
+      </li>
+      <li>
+        <i class='bx bxs-dollar-circle'></i>
+        <span class="text">
+          <h3>25250 Fcfa</h3>
+          <p>Profits totals</p>
+        </span>
+      </li>
+    </ul>
+
+    <br>
+
+    <div class="table-data">
+      <div class="order">
+        <div class="head">
+          <h3>Commandes récentes</h3>
+          <i class='bx bx-search'></i>
+          <i class='bx bx-filter'></i>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Client ID</th>
+              <th>Heure</th>
+              <th>Statut</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of recentOrders">
+              <td>{{ order.userId }}</td>
+              <td>{{ order.date | date: 'dd-MM-yyyy' }}</td>
+              <td class="status.completed" style="color: var(--orange)">{{ order.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="best-sellers">
+        <div class="head">
+          <i class="bx bx-analyse"></i>
+          <h3>All-time best sellers</h3>
+        </div>
+        <div class="best-seller-items">
+          <div class="best-seller-item">
+            <img src="assets/img/burger.jpg" alt="" style="border-radius: 10px;"/>
+            <div class="item-info">
+              <p class="title">Burger</p>
+              <p class="price">1000 Fcfa</p>
+            </div>
+          </div>
+          <div class="best-seller-item">
+            <img src="assets/img/chawarma.jpg" alt="" style="border-radius: 10px;"/>
+            <div class="item-info">
+              <p class="title" style="font-weight: bolder;">Chawarma</p>
+              <p class="price" style="font-size: 11px; font-weight: bold;">700 Fcfa</p>
+            </div>
+          </div>
+          <div class="best-seller-item">
+            <img src="assets/img/cafe-au-lait.jpg" alt="" style="border-radius: 10px;" />
+            <div class="item-info">
+              <p class="title" style="font-weight: bolder;">Café au lait</p>
+              <p class="price" style="font-size: 11px; font-weight: bold;">200 Fcfa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- CONTENT -->

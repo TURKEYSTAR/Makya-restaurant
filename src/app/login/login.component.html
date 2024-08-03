@@ -1,0 +1,40 @@
+<body>
+  <div class="table-data">
+    <div class="form-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <img src="../../assets/img/MakyaLogo.png" alt="MakyaLogo">
+
+        <div class="form-control">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            formControlName="email"
+            required
+          >
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error-message">
+            <div *ngIf="email?.errors?.['required']">Veuillez entrer votre email</div>
+            <div *ngIf="email?.errors?.['email']">Veuillez entrer le format demandé</div>
+          </div>
+        </div>
+        <div class="form-control">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          >
+          <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="error-message">
+            <div *ngIf="password?.errors?.['required']">Veuillez entrer votre mot de passe</div>
+            <div *ngIf="password?.errors?.['minlength']">Le mot de passe doit contenir au moins 6 caractères</div>
+          </div>
+        </div>
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+        <button type="submit" class="submit-button" [disabled]="loginForm.invalid">Se connecter</button>
+      </form>
+    </div>
+  </div>
+</body>

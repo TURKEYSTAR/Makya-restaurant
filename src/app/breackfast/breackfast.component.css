@@ -1,0 +1,38 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+a :hover{
+  text-decoration: none;
+  color: brown;
+}
+
+.product{
+  text-align: center;
+}
+
+.add-product {
+  width: 200px;
+  height: 255px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+
+.add-product-title {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.add-product-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.add-product-icon {
+  font-size: 50px;
+  color: #333;
+}

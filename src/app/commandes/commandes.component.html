@@ -1,0 +1,49 @@
+<!-- CONTENT -->
+<section id="content">
+  <!-- MAIN -->
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Commandes</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a routerLink="">Commandes</a>
+          </li>
+          <li><i class='bx bx-chevron-right'></i></li>
+          <li>
+            <a class="active" routerLink="/makyatraiteur/commandes">Historique des commandes</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-data">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Client ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Quantité</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <th scope="row">{{ order.id }}</th>
+            <td>{{ order.userId }}</td>
+            <td>{{ order.date | date: 'dd-MM-yyyy' }}</td>
+            <td>{{ order.name }}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.price }} Fcfa</td>
+            <td><span class="status">{{ order.status }}</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- CONTENT -->

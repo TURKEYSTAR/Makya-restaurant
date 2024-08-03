@@ -1,0 +1,16 @@
+.solde-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.solde-details {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.498);
+  background-color: #e6e6e6b4;
+}
+

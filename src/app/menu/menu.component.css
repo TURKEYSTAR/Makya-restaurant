@@ -1,0 +1,30 @@
+
+
+.add-category {
+  height: 250px;
+  width: 300px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+
+.add-category-title {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-category-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.add-category-icon {
+  padding-top: 10px;
+  font-size: 50px;
+  color: #333;
+}
+

@@ -1,0 +1,47 @@
+<section id="content">
+  <main>
+    <div class="head-title">
+      <div class="left">
+        <h1>Menu</h1>
+        <ul class="breadcrumb">
+          <li>
+            <a class="active" routerLink="/makyatraiteur/menu">Catégories</a>
+          </li>
+          <li><i class='bx bx-chevron-right'></i></li>
+          <li>
+            <a routerLink="">NOUVEAU PRODUIT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="table-data">
+      <div class="form-container">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Nom du produit:</label>
+            <input type="text" id="name" [(ngModel)]="productName" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Prix du produit:</label>
+            <input type="text" id="price" [(ngModel)]="productPrice" name="price" required>
+          </div>
+          <div class="form-group">
+            <label for="productImage">Image du produit:</label>
+            <div class="custom-file-upload">
+              <input type="file" id="productImage" (change)="onFileSelected($event)" required>
+              <label for="productImage">
+                <i class="bx bx-plus"></i> Ajouter une image
+              </label>
+            </div>
+            <div *ngIf="fileAdded" class="file-added-message">
+              <i class="bx bx-check"></i> Fichier ajouté
+            </div>
+          </div>
+          <button type="submit" class="submit-button">Ajouter</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</section>
